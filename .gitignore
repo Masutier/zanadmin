@@ -2,3 +2,5 @@
 /docs
 package-lock.json
 package.json
+venv
+venv/*
