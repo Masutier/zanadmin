@@ -1,0 +1,164 @@
+/* ALGUNOS CSS VIENEN DEL INDEX.CSS */
+/* ABAJO ESTAN LOS SIDEMENUS DE PROYECTOS */
+
+.btnproy{
+    font-size: 1.2rem;
+    color: #1392d3;
+    text-align: center;
+    background-color: transparent;
+    border: #1392d3 1px solid;
+    padding: 2px 25px 2px 25px;
+}
+.btnproy:hover{
+    font-size: 1.2rem;
+    color: #4cc947;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: #4cc947 1px solid;
+    padding: 1px 25px 2px 25px;
+}
+
+/* proyects.hbs */
+
+
+.proybox{
+    background-color: #353c48;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding: 5px;
+    border: #4c5667 1px solid;
+}
+.proynum{
+    font-size: 4rem;
+}
+.proynameapp{
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #f99300;
+}
+.proynameprg{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #f9c000;
+}
+.proynameprss{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #4cc947;
+}
+.proynameno{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: black;
+}
+.proynameret{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #767d83;
+}
+.proynamecan{
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: red;
+}
+.proydata{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: right;
+    color: #8d98a7;
+}
+.proydata1{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: left;
+    color: wheat;
+}
+
+/* pryvisit.hbs */
+
+.agri{
+    background-color: #476841;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding: 3px;
+    border: #4c5667 1px solid;
+}
+.pross{
+    background-color: #407cb1;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding: 3px;
+    border: #4c5667 1px solid;
+}
+.prossbox{
+    background-color: #353c48;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding-top: 10px;
+    border: #4c5667 1px solid;
+}
+.proydata2{
+    font-size: 1rem;
+    font-weight: 100;
+    color: wheat;
+}
+.proydata3{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.proyda{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    color: #8d98a7;
+}
+
+
+/* proypross */
+
+.prossbox1{
+    color: white;
+    border: #4c5667 1px solid;
+}
+.preg1{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    color: #8d98a7;
+}
+.resp1{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    color: wheat;
+}
+
+/* proyactive */
+
+.proydata4{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    color: wheat;
+}
+.proydata5{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+

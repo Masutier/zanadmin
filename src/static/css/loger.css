@@ -1,0 +1,27 @@
+
+.logimgtop{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.loginp{
+    background-color: #4c5667;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-color: black;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.card{
+    background-color: #353c48;
+}
+
+.card-body{
+    background-color: #353c48;
+}

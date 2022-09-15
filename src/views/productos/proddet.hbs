@@ -1,0 +1,139 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    <!-- SIDE MENU -->
+    <div class="col-lg-2 backmenu ">
+        <div class="col-lg-12  ">
+
+            <img class="imgtop" src="/imagen/logozh.png">
+
+            <div class="col-lg-12 pt-4 prodprop">
+                <p class="menutitle ">Total Proyectos</p>
+                <p class="menutxt ">Recordemos que es nuestra responsabilidad ser coherentes con los proncipios ZanaHora.</p>
+                <p class="menutxt ">Para ello, se recomienda no aprovar nada que se salga de las normativas.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- USUARIOS REGISTRADOS -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Registrados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="prodtitle">Producto </h1>
+            </div>
+            <div class="col-lg-12 c">
+                <h1 class="prodtitle">{{producto.slist3}}</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 usrbox ">
+                        <div class="col-lg-12 row ">
+                            <div class="col-lg-1 ">
+                                <h4 class="usrdata c">Proyecto:</h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proynameapp pt-1">{{producto.proy}}</h4>
+                            </div>
+
+                            <div class="col-lg-1 ">
+                                <h4 class="usrdata c">Categoria:</h4>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <h4 class="proynameapp pt-1">{{producto.slist3}}</h4>
+                            </div>
+
+                            <div class="col-lg-1 ">
+                                <h4 class="usrdata c">Status:</h4>
+                            </div>
+                            <div class="col-lg-2 ">
+                                <h4 class="proynameapp pt-1">{{producto.status}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-3 row ">
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata c">Presentación:</h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata1 c">{{producto.presenta}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 row ">
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata c">Cantidad:</h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata1 c">{{producto.cantidad}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 row ">
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata c">precio:</h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata1 c">{{producto.precio1}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 row ">
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata c">Oferta:</h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <h4 class="usrdata1 c">{{producto.precio2}}</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 row ">
+                            <div class="col-lg-1 ">
+                                <h4 class="usrdata c">Descripción:</h4>
+                            </div>
+                            <div class="col-lg-11 ">
+                                <h4 class="usrdata1 c">{{producto.descrip}}</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 row ">
+                            <div class="col-lg-1 ">
+                                <h4 class="usrdata c">Fotos:</h4>
+                            </div>
+                            <div class="col-lg-11 ">
+                                <h4 class="usrdata1 c">{{producto.foto1}}</h4>
+                                <h4 class="usrdata1 c">{{producto.foto2}}</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 row ">
+                            <div class="col-lg-6 mx-auto row ">
+                                <a class="col-md-3 btn btn-success " href="/prodedit/{{producto._id}}">Editar</a>
+
+                                <a class="col-md-3 btn btn-primary bm" href="/prodpage/{{producto._id}}">Paginar</a>
+
+                                <form action="/proddelete/{{producto._id}}?_method=DELETE" method="POST">
+                                    <input class="col-lg-12" type="hidden" name="_method" value="DELETE">
+                                    <button class="col-md-11 btn btn-danger pd " type="submit">Eliminar</button>
+                                </form>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<a href="/productos">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

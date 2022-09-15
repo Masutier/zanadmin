@@ -1,0 +1,564 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    {{> menus/proysidemenu }}
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- PROYECTOS EN PROCESO DE SELECCION -->
+        <div class="col-lg-12 mx-auto pt-3 borde">
+
+            {{#each errors}}
+            <div class="col-lg-7 mx-auto">
+                <h4 class="errortxt ">
+                    {{ text }}
+                </h4>
+            </div>
+            {{/each }}
+
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyecto a Seleccionar</h1>
+                <h1 class="proynameprss c">{{Applayed.proyname}}</h1>
+                <div class="col-lg-11 row mx-auto">
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata ">Fecha de aplicación:</h4>
+                        <h4 class="proydata ">Fecha de Visita:</h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata1 ">{{Applayed.proydate.proyAappldate}}</h4>
+                        <h4 class="proydata1 ">{{Applayed.proydate.proyVisdate}}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 mx-auto">
+                <h4 class="proynameprss c">Información del Proyecto</h4>
+            </div>
+
+            <!-- INFO PROYECT -->
+            <div class="row">
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Representante:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.represent.repfirstname}} {{Applayed.represent.repmiddlename}} {{Applayed.represent.replastname}} {{Applayed.represent.repmaidenname}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Categoría:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proycateg}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Teléfono:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyphoneNum}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">E-mail:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyemail}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Dirección:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proyaddress}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Vereda/Barrio:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proyvereda}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Municipio/Ciudad:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proymunic}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Departamento:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proydept}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">País:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proypais}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata c">Tiempo de actividades:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.farmingtime}}</h4>
+                        </div>
+                        <div class="col-lg-12 ">
+                            <h4 class="box1remark c">Comunidades a que pertenece:</h4>
+                            <h4 class="proydata2 c">{{Applayed.comunity}}</h4>
+                            <h4 class="box1remark c">Mercados o Ferias en que comercializa:</h4>
+                            <h4 class="proydata2 c">{{Applayed.marketing}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 mx-auto prossbox">
+                        <h4 class="proynameapp c">Actividades</h4>
+                        <div class="col-lg-12 row mx-auto">
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectone}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyecttwo}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectthre}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectfour}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectfive}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectsix}}</h4>
+                            </div>
+                            <div class="col-lg-5">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectseven}}</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 row mx-auto prossbox">
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata c">Acepto el Habeas Data:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.proyhabeas}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICACIONES -->
+            <div class="col-lg-12 p-1 ">
+                <div class="col-lg-11 mx-auto prossbox">
+                    <h4 class="proynameapp c">Certificaciones</h4>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxbpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">Manipulación de Alimentos</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifbpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatebpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplabpm}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnameuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdateuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplauna}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxdos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnamedos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifdos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatedos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplados}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxtre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnametre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certiftre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatetre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplatre}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISITA -->
+            
+            <div class="col-lg-5 mx-auto">
+                <h4 class="proynameprss c">Visita</h4>
+            </div>
+
+            <!-- Responsables -->
+            <div class="col-lg-12 p-1 ">
+                <div class="col-lg-11 pb-2 mx-auto prossbox">
+                    
+                    <div class="col-lg-11 mx-auto ">
+                        <div class="col-lg-12 mx-auto ">
+                            <h4 class="proynameapp c">Responsable</h4>
+                        </div>
+                        <div class="col-lg-8 mx-auto row prossbox1 ">
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata pt-2 c">Nombres:</h4>
+                            </div>
+                            <div class="col-lg-8 pt-2 ">
+                                <h4 class="proydata1 c">{{Admin.firstname}} {{Admin.middlename}} {{Admin.lastname}} {{Admin.maidenname}}</h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">ZanaHora Id:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visit.visitax}} </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12  mx-auto row ">
+                        <div class="col-lg-12 pt-2 mx-auto ">
+                            <h4 class="proynameapp c">Asistentes</h4>
+                        </div>
+
+                        <div class="col-lg-6 mx-auto row prossbox1 ">
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Nombres:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitax1}} </h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Documento:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitacc1}} </h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mx-auto row prossbox1 ">
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Nombres:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitax2}} </h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Documento:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitacc2}} </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12  ">
+                        <div class="col-lg-6 mx-auto row prossbox1 ">
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Nombres:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitax3}} </h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Documento:</h4>
+                            </div>
+                            <div class="col-lg-8 ">
+                                <h4 class="proydata1 c">{{Applayed.visitwitness.visitacc3}} </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12 p-1 ">
+                <div class="col-lg-11 mx-auto prossbox">
+                    <div class="col-lg-12 mx-auto ">
+                        <h4 class="proynameapp c">Sector Agrícola</h4>
+                    </div>
+
+                    <!-- Agricola -->
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <!-- parte 1 -->
+                        <div class="col-lg-6 ">
+                            <div class="col-lg-12 ">
+                                <!-- seccion 1 -->
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Tiempo de practicas Agroecológica en los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis1}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Cual es el uso de pesticidas, fungicidas y/o insecticidas de composición sintética en los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis2}}</h4>
+                                    <h4 class="preg1">Si utiliza estas substancias, descríbalas:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis2t}}</h4>
+                                    <h4 class="preg1">Hace cuanto tiempo las utiliza?:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis2d}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Cual es el uso de fertilizantes de composición sintética en los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis3}}</h4>
+                                    <h4 class="preg1">Si utiliza estos fertilizantes, descríbalos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis3t}}</h4>
+                                    <h4 class="preg1">Hace cuanto tiempo los utiliza?:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis3d}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Tiempo de practicas Agroecológica en los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis4}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Que planes establecidos hacen parte de su proyecto:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis5}}</h4>
+                                </div>
+                                <!-- parte 2 -->
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">El uso de pesticidas, fungicidas y/o insecticidas de composición Agroecologica usa en los cultivos?:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis6}}</h4>
+                                    <h4 class="preg1">Describa parcialmente los métodos que utiliza:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis6t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Que metodo de compostaje realiza en el predio para los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis7}}</h4>
+                                    <h4 class="preg1">Si utiliza Otro tipo, descríbalo:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis7t}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- seccion 2 -->
+                        <div class="col-lg-6 ">
+                            <div class="col-lg-12 ">
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">El registro documental de los procesos de cultivo los realiza:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis8}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Cada cuanto realiza rotación de los cultivos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis9}}</h4>
+                                    <h4 class="preg1">Si utiliza Otro sistema, descríbalo:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis9t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">En el proceso de cultivo, tiene áreas para:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis10}}</h4>
+                                    <h4 class="preg1">Si utiliza Otro sistema, descríbalo:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis10t}}</h4>
+                                </div>
+                                <!-- parte 3 -->
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Si consigue las plantulas en otro sitio, cual:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis11t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Que fuente de agua tiene para irrigar?:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis12t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Que fuente de agua utiliza para lavar los productos:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis13t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Utiliza alguna substancia para el lavado de productos? (Agroecológico o químico)</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis14}}</h4>
+                                    <h4 class="preg1">Descríbala:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis14t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Que fuente de agua utiliza para lavar las herramientas:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis15t}}</h4>
+                                </div>
+                                <div class="col-lg-12 prossbox">
+                                    <h4 class="preg1">Utiliza alguna substancia para el lavado de las herramientas? (Agroecológico o químico)</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis16}}</h4>
+                                    <h4 class="preg1">Descríbala:</h4>
+                                    <h4 class="resp1">{{Applayed.visit.agricola.vis16t}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Procesados -->
+
+                </div>
+            </div>
+
+
+            <!-- NOTAS -->
+            <div class="col-lg-12 row mx-auto prossbox">
+                <div class="col-lg-12 ">
+                    <h4 class="proynameapp c">Notas</h4>
+                    <div class="col-lg-12 mx-auto prossbox">
+                        <h4 class="proynameapp c">Aplicación</h4>
+                        <div class="col-lg-11 mx-auto ">
+                            <h4 class="proydata2">{{Applayed.notas.notasapply}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 mx-auto prossbox">
+                        <h4 class="proynameapp c">Visita</h4>
+                        <div class="col-lg-11 mx-auto ">
+                            <h4 class="proydata2">{{Applayed.notas.notasvisit}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mx-auto prossbox">
+                <h4 class="proynameapp c">Productos sugeridos</h4>
+                <div class="col-lg-11 mx-auto ">
+                    <h4 class="proydata2">{{Applayed.visit.prodappr}}</h4>
+                </div>
+            </div>
+
+            <!-- APROVACION -->
+            <form action="/pross/{{Applayed._id}}" method="POST">
+
+            <div class="col-lg-12 mx-auto p-3 box1">
+                <div class="form-row mx-auto ">
+                    <div class="col-md-12 ">
+                        <h4 class="proynameapp c">Productos Aprobados</h4>
+                        <textarea class="form-group col-md-12" type="text" name="prodappr" placeholder="Notas">{{prodappr}}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-row mx-auto ">
+                    <div class="col-md-12 ">
+                        <h4 class="proynameapp c">Notas de la Aprobación del Proyecto</h4>
+                        <textarea class="form-group col-md-12" type="text" name="notasappr" placeholder="Notas">{{notasappr}}</textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mx-auto p-3 backred c">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="cumple" name="cumple">
+                        <label class="custom-control-label proydata3 " for="cumple">Cumple con los Requisitos</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 pb-3 mx-auto margupbutt">
+                <button class="btn btn-success btn-block" name="submit" type="submit">
+                    Guardar
+                </button>
+            </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+<a href="/proyects">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

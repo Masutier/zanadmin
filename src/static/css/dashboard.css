@@ -1,0 +1,17 @@
+/* DASHBOARD */
+
+.a0{
+    color: white;
+}
+.a0:hover{
+    color: #353c48;
+}
+.dashboard{
+    background-color: #4c5667;
+    color: white;
+    overflow: auto;
+    padding: 0;
+    border: #353c48 1px solid;
+}
+
+

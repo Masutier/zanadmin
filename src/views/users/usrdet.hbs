@@ -1,0 +1,150 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    <div class="col-lg-2 backmenu  ">
+        <div class="col-lg-12 sticky">
+
+            <img class="imgtop" src="/imagen/logozh.png">
+
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Registrados">Usuarios Registrados</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Retirados">Usuarios Retirados</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Suspendidos">Usuarios Suspendidos</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- Info Usuario -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+
+            {{#each errors}}
+            <div class="col-lg-7 mx-auto">
+                <h4 class="errortxt ">
+                    {{ text }}
+                </h4>
+            </div>
+            {{/each }}
+
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Usuario Registrado</h1>
+                <h1 class="proynameprss c">{{Usr.firstname}} {{Usr.lastname}}</h1>
+                <h4 class="proydata2 ">{{Usr.id}}</h4>
+                <div class="col-lg-11 row mx-auto">
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata ">Fecha de aplicación a ZanaHora:</h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata1 ">{{Usr.newDate}}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Usuario:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.firstname}} {{Usr.lastname}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Categoría:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.rolin}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Estilo de Vida:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.estilo}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Teléfono:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.phoneNum}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">E-mail:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.email}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Dirección:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.usaddress}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Vereda/Barrio:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.usbarrio}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Municipio/Ciudad:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.uscity}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Departamento:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.usdept}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">País:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Usr.uspais}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mx-auto p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox">
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata c">Acepto el Habeas Data:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Usr.habeas}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mx-auto prossbox">
+                    <h4 class="proynameapp c">Notas de la Aplicación del Usuario</h4>
+                    <div class="col-lg-11 mx-auto ">
+                        <h4 class="proydata2">{{Usr.notasuser}}</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<a href="/users">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

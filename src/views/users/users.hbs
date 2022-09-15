@@ -1,0 +1,147 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    <div class="col-lg-2 backmenu  ">
+        <div class="col-lg-12 sticky">
+            
+            <img class="imgtop" src="/imagen/logozh.png">
+
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Registrados">Usuarios Registrados</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Retirados">Usuarios Retirados</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Suspendidos">Usuarios Suspendidos</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- USUARIOS REGISTRADOS -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Registrados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Usuarios Registrados {{usnum}}</h1>
+            </div>
+
+            <div class="row">
+            {{#each Users}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 usrbox ">
+                        <h4 class="proynameapp c">{{firstname}} {{middlename}} {{lastname}} {{maidenname}}</h4>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-4 ">
+                                <h4 class="usrdata c">Fecha de Registro:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="usrdata1 c">{{newDate}}</h4>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <a class="btnusr btn-block" href="/usrdet/{{_id}}">Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+        
+        <!-- USUARIOS RETIRADOS -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Retirados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Usuarios Retirados </h1>
+                <h5 class="box1remark c">Usuarios que decidieron no seguir con nosotros</h5>
+            </div>
+
+            <div class="row">
+            <!-- {{#each userret}} -->
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 usrbox ">
+                        <h4 class="proynameapp c">{{firstname}} {{middlename}} {{lastname}} {{maidenname}}</h4>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-4 ">
+                                <h4 class="usrdata c">Fecha de Registro:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="usrdata1 c">{{newDate}}</h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Fecha de Retiro:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata1 c"></h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata pt-1 c">Motivos del Retiro:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata1 c"></h4>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <a class="btnusr btn-block" href="#">Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- {{/each }} -->
+            </div>
+        </div>
+
+        <!-- USUARIOS CANCELADOS -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Suspendidos"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Usuarios Suspendidos </h1>
+                <h5 class="box1remark c">Usuarios que fueron suspendidos</h5>
+            </div>
+
+            <div class="row">
+            <!-- {{#each usersusp }} -->
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 usrbox ">
+                        <h4 class="proynameapp c">{{firstname}} {{middlename}} {{lastname}} {{maidenname}}</h4>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-4 ">
+                                <h4 class="usrdata c">Fecha de Registro:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="usrdata1 c">{{newDate}}</h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata c">Fecha Suspensión:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata1 c"></h4>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h4 class="proydata pt-1 c">Motivo Suspensión:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata1 c"></h4>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <a class="btnusr btn-block" href="#">Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- {{/each }} -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<a href="/">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

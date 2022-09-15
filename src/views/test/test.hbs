@@ -1,0 +1,279 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    {{> menus/proysidemenu }}
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- PROYECTOS APLICANDO -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Aplicando"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos Aplicando</h1>
+            </div>
+
+            <div class="col-lg-9 mx-auto p-1 ">
+                <div class="row">
+                    <div class="col-lg-3 mx-auto box1">
+                        <h5 class="box1remark c">Numero de proyectos aplicando</h5>
+                        <h4 class="proynum c">{{appnum}}</h4>
+                    </div>
+                    <div class="col-lg-9 mx-auto box1">
+                        <h5 class="box1remark c">Proyectos que están aplicando</h5>
+                        {{#each Applayed}}
+                        <h4 class="proynameapp c">{{proyname}}</h4>
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            {{#each Applayed}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 box1 ">
+                        <h1 class="proynameapp c">{{proyname}}</h1>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata c">Aplicación a ZanaHora:</h4>
+                            </div>
+                            <div class="col-lg-7 ">
+                                <h4 class="proydata1 c">{{proydate.proyAappldate}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="/testpross/{{_id}}">Procesar</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+        
+        <!-- PROYECTOS EN PROCESO DE SELECCION -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Proceso"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos en Proceso</h1>
+            </div>
+
+            <div class="col-lg-9 mx-auto p-1 ">
+                <div class="row">
+                    <div class="col-lg-3 mx-auto box1">
+                        <h5 class="box1remark c">Numero de proyectos aplicando</h5>
+                        <h4 class="proynum c">{{visnum}}</h4>
+                    </div>
+                    <div class="col-lg-9 mx-auto box1">
+                        <h5 class="box1remark c">Proyectos que estan siendo evaluados </h5>
+                        {{#each Visitado}}
+                        <h4 class="proynameprg c">{{proyname}}</h4>
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            {{#each Visitado}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-12 mx-auto p-4 box1 ">
+                        <h1 class="proynameapp c">{{proyname}}</h1>
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata c">Aplicación a ZanaHora:</h4>
+                                <h4 class="proydata c">Visita al Proyecto:</h4>
+                            </div>
+                            <div class="col-lg-7 ">
+                                <h4 class="proydata1 c">{{proydate.proyAappldate}}</h4>
+                                <h4 class="proydata1 c">{{proydate.proyVisdate}}</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="/prypross/{{_id}}">Procesar</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+
+        <!-- PROYECTOS ACTIVOS -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <a id="Activos"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos Activos</h1>
+            </div>
+
+            <div class="col-lg-9 mx-auto p-1 ">
+                <div class="row">
+                    <div class="col-lg-3 mx-auto box1">
+                        <h5 class="box1remark c">Numero de proyectos Activos</h5>
+                        <h4 class="proynum c">{{actnum}}</h4>
+                    </div>
+                    <div class="col-lg-9 mx-auto box1">
+                        <h5 class="box1remark c">Proyectos que están activos actualmente en la pagina</h5>
+                        {{#each Active}}
+                        <h4 class="proynameapp c">{{proyname}}</h4>
+                        {{/each }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            {{#each Proyect}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 mx-auto p-4 box1 ">
+
+                        <h1 class="proynameprss c">{{proyname}}</h1>
+
+                        <div class="col-lg-12 mx-auto row">
+                            <div class="col-lg-7 ">
+                                <h4 class="proydata c">Fecha de aplicación a ZanaHora:</h4>
+                                <h4 class="proydata c">Fecha de aprobación en ZanaHora:</h4>
+                            </div>
+                            <div class="col-lg-5 ">
+                                <h4 class="proydata1 c">{{proydate.proyAappldate}}</h4>
+                                <h4 class="proydata1 c">{{proydate.proyAprobdate}}</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="#">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+
+        <!-- PROYECTOS NEGADOS -->
+        <div class="col-lg-12 mx-auto pt-3 borde">
+            <a id="Negados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos Negados</h1>
+            </div>
+            <div class="col-lg-10 mx-auto p-1 ">
+                <div class="col-lg-11 mx-auto box1">
+                    <h5 class="box1remark c">Proyectos a los que se les nego el derecho de vender en ZanaHora</h5>
+                    {{#each Noproyect}}
+                    <h4 class="proynameno c">{{proyname}}</h4>
+                    {{/each }}
+                </div>
+            </div>
+            <div class="row">
+            {{#each Noproyect}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 mx-auto p-4 box1 ">
+
+                        <h1 class="proynameno c">{{proyname}}</h1>
+                        <h4 class="proydata c">Fecha de aplicación a ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata c">Fecha de Negación en ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata pt-1 c">Representante:</h4>
+                        <h4 class="proydata1 c">{{repfirstname}} {{repmiddlename}} {{replastname}} {{repmaidenname}}</h4>
+                        <h4 class="proydata pt-1 c">Motivos:</h4>
+                        <h4 class="proydata1 c">{{nonota}}</h4>
+
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="#">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+
+        <!-- PROYECTOS RETIRADOS -->
+        <div class="col-lg-12 mx-auto pt-3 borde">
+            <a id="Retirados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos Retirados</h1>
+            </div>
+            <div class="col-lg-10 mx-auto p-1 ">
+                <div class="col-lg-11 mx-auto box1">
+                    <h5 class="box1remark c">Proyectos que decidieron no seguir con nosotros</h5>
+                    {{#each byeproyect}}
+                    <h4 class="proynameret c">{{proyname}}</h4>
+                    {{/each }}
+                </div>
+            </div>
+            <div class="row">
+            {{#each byeproyect}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 mx-auto p-4 box1 ">
+
+                        <h1 class="proynameret c">{{proyname}}</h1>
+                        <h4 class="proydata c">Fecha de aplicación a ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata c">Fecha de aprobación en ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata c">Fecha de Retiro de ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata pt-1 c">Representante:</h4>
+                        <h4 class="proydata1 c">{{repfirstname}} {{repmiddlename}} {{replastname}} {{repmaidenname}}</h4>
+                        <h4 class="proydata pt-1 c">Motivos del Retiro:</h4>
+                        <h4 class="proydata1 c">{{nonota}}</h4>
+
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="#">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+
+        <!-- PROYECTOS CANCELADOS -->
+        <div class="col-lg-12 mx-auto pt-3 borde">
+            <a id="Eliminados"></a>
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Proyectos Eliminados</h1>
+            </div>
+            <div class="col-lg-10 mx-auto p-1 ">
+                <div class="col-lg-11 mx-auto box1">
+                    <h5 class="box1remark c">Proyectos que se les revoco el derecho de vender en ZanaHora</h5>
+                    {{#each Rejectedproy}}
+                    <h4 class="proynamecan c">{{proyname}}</h4>
+                    {{/each }}
+                </div>
+            </div>
+            <div class="row">
+            {{#each Rejectedproy}}
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 mx-auto p-4 box1 ">
+
+                        <h1 class="proynamecan c">{{proyname}}</h1>
+                        <h4 class="proydata c">Fecha de aplicación a ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata c">Fecha de aprobación en ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata c">Fecha de Cancelación de ZanaHora:</h4>
+                        <h4 class="proydata1 c">{{proyDate}}</h4>
+                        <h4 class="proydata pt-1 c">Representante:</h4>
+                        <h4 class="proydata1 c">{{repfirstname}} {{repmiddlename}} {{replastname}} {{repmaidenname}}</h4>
+                        <h4 class="proydata pt-1 c">Motivos de la Cancelación:</h4>
+                        <h4 class="proydata1 c">{{nonota}}</h4>
+
+                        <div class="col-lg-12 c">
+                            <a class="btnproy btn-block" href="#">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            {{/each }}
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<a href="/">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

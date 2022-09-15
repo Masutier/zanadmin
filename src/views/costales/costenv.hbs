@@ -1,0 +1,155 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    {{> menus/proysidemenu }}
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+    <!-- Info Usuario -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            {{#if mensaje}}
+            <div class="col-lg-7 mx-auto">
+                <h4 class="errortxt ">
+                    {{ mensaje }}
+                </h4>
+            </div>
+            {{/if}}
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Costales Enviados {{confnum}}</h1>
+                <h4 class="proydata1 c">Estimado total en costales enviados = {{estimado}} cop</h4>
+            </div>
+
+            {{#each cost }}
+
+            <div class="row ">
+
+                <div class="col-lg-12 row prossbox ">
+                    <div class="col-md-11 ">
+
+                        <div class="col-lg-12 row ">
+                            <div class="col-lg-4 row mx-auto ">
+                                <div class="col-lg-4 pt-3 ">
+                                    <h4 class="proydata c">Usuario:</h4>
+                                </div>
+                                <div class="col-lg-8 pt-3 ">
+                                    <h4 class="costdata1 c">{{usrname}} {{usrlast}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">Id:</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrid}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">Teléfono:</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrtel}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 row mx-auto  ">
+                                <div class="col-lg-4 pt-3 ">
+                                    <h4 class="proydata c">Dirección:</h4>
+                                </div>
+                                <div class="col-lg-8 pt-3">
+                                    <h4 class="costdata1 c">{{usradd}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">Vereda/Barrio:</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrbrr}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">Municipio/Ciudad:</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrcty}}</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 row mx-auto  ">
+                                <div class="col-lg-4 pt-3 ">
+                                    <h4 class="proydata c">Departamento:</h4>
+                                </div>
+                                <div class="col-lg-8 pt-3">
+                                    <h4 class="costdata1 c">{{usrdep}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">País:</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrpais}}</h4>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <h4 class="proydata c">Rol</h4>
+                                </div>
+                                <div class="col-lg-8 ">
+                                    <h4 class="costdata1 c">{{usrrol}}</h4>
+                                </div>
+                            </div>
+
+                        <!-- Costal Confirmado-->
+                            <div class="col-lg-12 mx-auto prossbox ">
+                                <div class="col-lg-12 row mx-auto ">
+                                    <div class="col-lg-4 c ">
+                                        <h4 class="usrcost">Producto</h4>
+                                    </div>
+                                    <div class="col-lg-2 c ">
+                                        <h4 class="usrcost">Precio</h4>
+                                    </div>
+                                    <div class="col-lg-1 c ">
+                                        <h4 class="usrcost">Cant.</h4>
+                                    </div>
+                                    <div class="col-lg-3 c ">
+                                        <h4 class="usrcost">Subtotal</h4>
+                                    </div>
+                                    <div class="col-lg-2 c ">
+                                        <h4 class="usrcost">Enviado</h4>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 row mx-auto ">
+                                    <div class="col-lg-4 c ">
+                                        <h4 class="costdata1">{{costal.prodname}}</h4>
+                                    </div>
+                                    <div class="col-lg-2 c ">
+                                        <h4 class="costdata1">{{costal.prodpre1}}</h4>
+                                    </div>
+                                    <div class="col-lg-1 c ">
+                                        <h4 class="costdata1">{{costal.cosqty}}</h4>
+                                    </div>
+                                    <div class="col-lg-3 c ">
+                                        <h4 class="costdata1">{{costal.prodsub}}</h4>
+                                    </div>
+                                    <div class="col-lg-2 c ">
+                                        <h4 class="costdata1 ">{{senddate}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="col-lg-12 mx-auto p-2 prossbox ">
+                            <p>Pago</p>
+                            <a class="col-md-12 btn btn-success" href="/costpago/{{_id}}">P</a>
+                            <p class="pt-2">Retorno</p>
+                            <a class="col-md-12 btn btn-success" href="/costsale/{{_id}}">R</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<a href="/">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

@@ -1,0 +1,45 @@
+
+/* GENERAL */
+.borde{
+    border: solid 1px black !important;
+}
+.c{
+    text-align: center;
+}
+.box1{
+    background-color: #353c48;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding: 3px;
+    border: #4c5667 1px solid;
+}
+.errortxt{
+    background-color: tomato;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 8px;
+}
+.fontred{
+    color: #ec3b3b;
+}
+.backred{
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* BACK PAGE */
+.bttp1{
+    width: 50px;
+    height: auto;
+}
+.sticky2{
+    position: sticky;
+    bottom: 23px;
+    right: 110px;
+    z-index: 10;
+}

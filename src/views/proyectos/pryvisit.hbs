@@ -1,0 +1,1144 @@
+
+<body class="mainback">
+<div class="col-lg-12 row">
+
+    <!-- SIDE MENU -->
+    <div class="col-lg-2 backmenu ">
+        <div class="col-lg-12 sticky ">
+
+            <img class="imgtop" src="/imagen/logozh.png">
+
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Aplicando">Proyectos Aplicando</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Agricola">Proyectos Agricolas</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Procesados">Proyectos Procesados</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Otros">Otros tipo</a>
+            </div>
+            <div class="col-lg-12 prodprop">
+                <a class="proylinks" href="#Notas">Notas</a>
+            </div>
+
+            <div class="col-lg-12 pt-4 prodprop">
+                <p class="menutitle">
+                    EL FORMULARIO
+                </p>
+                <p class="menutxt">
+                    Si se activa el botón de "Cumple con los Requisitos", la información se guarda y el proyecto pasa a "Proyectos en Proceso", 
+                    allí es mas difícil editar la información de la visita, así que introduzca la información con cuidado.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-lg-10 mainback ">
+
+        {{> menus/dashboard }}
+
+        <!-- PROYECTOS EN PROCESO DE SELECCION -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+
+            {{#each errors}}
+            <div class="col-lg-7 mx-auto">
+                <h4 class="errortxt ">
+                    {{ text }}
+                </h4>
+            </div>
+            {{/each }}
+<!-- Proyecto Aplicante -->
+            <div class="col-lg-12 c">
+                <a id="Proyecto"></a>
+                <h1 class="box1title">Proyecto Aplicando</h1>
+                <h1 class="proynameprss c">{{Applayed.proyname}}</h1>
+                <div class="col-lg-11 row mx-auto">
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata ">Fecha de aplicación a ZanaHora:</h4>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <h4 class="proydata1 ">{{Applayed.proyDate}} Diciembre 25 2020 12:30 pm</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Representante:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.represent.repfirstname}} {{Applayed.represent.repmiddlename}} {{Applayed.represent.replastname}} {{Applayed.represent.repmaidenname}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Categoría:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proycateg}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Teléfono:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyphoneNum}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">E-mail:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyemail}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Dirección:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proyaddress}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Vereda/Barrio:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proyvereda}}</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata c">Localidad:</h4>
+                        </div>
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata1 c">{{Applayed.proyadd.proymunic}}, {{Applayed.proyadd.proydept}}, {{Applayed.proyadd.proypais}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 p-1 ">
+                    <div class="col-lg-11 row mx-auto prossbox ">
+                        <div class="col-lg-7 ">
+                            <h4 class="proydata c">Tiempo de actividades:</h4>
+                        </div>
+                        <div class="col-lg-5 ">
+                            <h4 class="proydata1 c">{{Applayed.farmingtime}}</h4>
+                        </div>
+                        <div class="col-lg-12 ">
+                            <h4 class="box1remark c">Comunidades a que pertenece:</h4>
+                            <h4 class="proydata2 c">{{Applayed.comunity}}</h4>
+                            <h4 class="box1remark c">Mercados o Ferias en que comercializa:</h4>
+                            <h4 class="proydata2 c">{{Applayed.marketing}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 mx-auto prossbox">
+                        <h4 class="proynameapp c">Actividades</h4>
+                        <div class="col-lg-12 row mx-auto">
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectone}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyecttwo}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectthre}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectfour}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectfive}}</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectsix}}</h4>
+                            </div>
+                            <div class="col-lg-5">
+                                <h4 class="proydata2">{{Applayed.proycategories.proyectseven}}</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-11 row mx-auto prossbox">
+                        <div class="col-lg-8 ">
+                            <h4 class="proydata c">Acepto el Habeas Data:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.proyhabeas}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 p-1 ">
+                <div class="col-lg-11 mx-auto prossbox">
+                    <h4 class="proynameapp c">Certificaciones</h4>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxbpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">Manipulación de Alimentos</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifbpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatebpm}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplabpm}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnameuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdateuna}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplauna}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxdos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnamedos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifdos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatedos}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplados}}</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Expedido por:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certifxtre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Tipo de Certificado:</h4>
+                        </div>
+                        <div class="col-lg-4 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certnametre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Numero:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certiftre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Vence:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certdatetre}}</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata c">Ciudad/País:</h4>
+                        </div>
+                        <div class="col-lg-2 ">
+                            <h4 class="proydata1 c">{{Applayed.certificados.certplatre}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 row mx-auto prossbox">
+                        <div class="col-lg-10 mx-auto ">
+                            <h4 class="box1remark c">Otras Certificaciones:</h4>
+                            <h4 class="proydata2 c">{{Applayed.certificados.mascertif}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mx-auto prossbox">
+                <h4 class="proynameapp c">Notas del Aplicante</h4>
+                <div class="col-lg-11 mx-auto ">
+                    <h4 class="proydata2">{{Applayed.notas.notasapply}}</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+<!-- VISITA -->
+        <div class="col-lg-12 mx-auto pt-3 ">
+            <div class="col-lg-12 c">
+                <h1 class="box1title">Visita Al Proyecto</h1>
+                <h1 class="proynameprss c">{{Applayed.proyname}}</h1>
+                <h4 class="proyda">El RESPONSABLE de la visita no debe entrar ningún dato personal</h4>
+                <h4 class="proyda">El solo hecho de "LogIn" es suficiente</h4>
+            </div>
+
+            <form action="/visit/{{Applayed._id}}" method="POST">
+
+            <div class="row">
+                <div class="col-lg-12 p-1 ">
+                    <div class="col-lg-11 mx-auto box1 ">
+
+                        <div class="col-lg-12 mx-auto pt-3 box1 ">
+                            <div class="form-row mx-auto ">
+                                <div class="col-md-3 mx-auto">
+                                    <h4 class="proynameapp c">Fecha de visita:</h4>
+                                    <input class="form-group col-md-12" type="date" name="proyVisdate" placeholder="Productos?" value="{{proyVisdate}}">
+                                </div>
+                            </div>
+                            <div class="form-row mx-auto ">
+                                <div class="col-md-9 ">
+                                    <h4 class="proynameapp c">Asistentes a la Visita: (Minimo 1 testigo es necesario)</h4>
+                                    <input class="form-group col-md-12" type="text" name="visitax1" placeholder="Nombres y Apellidos" value="{{visitax1}}">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <h4 class="proynameapp c">Documentos de Identidad:</h4>
+                                    <input class="form-group col-md-12" type="text" name="visitacc1" placeholder="Documento" value="{{visitacc1}}">
+                                </div>
+                            </div>
+                            <div class="form-row mx-auto ">
+                                <div class="col-md-9 ">
+                                    <input class="form-group col-md-12" type="text" name="visitax2" placeholder="Nombres y Apellidos" value="{{visitax2}}">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input class="form-group col-md-12" type="text" name="visitacc2" placeholder="Documento" value="{{visitacc2}}">
+                                </div>
+                            </div>
+                            <div class="form-row mx-auto ">
+                                <div class="col-md-9 ">
+                                    <input class="form-group col-md-12" type="text" name="visitax3" placeholder="Nombres y Apellidos" value="{{visitax3}}">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input class="form-group col-md-12" type="text" name="visitacc3" placeholder="Documento" value="{{visitacc3}}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mx-auto pt-3 agri">
+                            <a id="Agricola"></a>
+                            <h4 class="proynameapp c">Producción agrícola</h4>
+                            <div class="form-row mx-auto ">
+                                <!-- PART 1 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Tiempo de practicas Agroecológica en los cultivos:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p1a" name="vis1" class="custom-control-input" value="Menos de un año">
+                                                <label class="custom-control-label" for="p1a">Menos de un año</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p1b" name="vis1" class="custom-control-input" value="Un año">
+                                                <label class="custom-control-label" for="p1b">Un año</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p1c" name="vis1" class="custom-control-input" value="Dos años o mas">
+                                                <label class="custom-control-label" for="p1c">Dos años o mas</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Cual es el uso de pesticidas, fungicidas y/o insecticidas de composición sintética en los cultivos:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p2a" name="vis2" class="custom-control-input" value="Tradicional">
+                                                <label class="custom-control-label" for="p2a">Tradicional</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p2b" name="vis2" class="custom-control-input" value="Parcial">
+                                                <label class="custom-control-label" for="p2b">Parcial</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p2c" name="vis2" class="custom-control-input" value="Ninguna">
+                                                <label class="custom-control-label" for="p2c">Ninguna</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si utiliza estas substancias, descríbalas:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis2t" placeholder="Substancias" value="{{vis2t}}">
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Hace cuanto tiempo las utiliza?:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis2d" placeholder="Tiempo de uso" value="{{vis2d}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Cual es el uso de fertilizantes de composición sintética en los cultivos:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p3a" name="vis3" class="custom-control-input" value="Tradicional">
+                                                <label class="custom-control-label" for="p3a">Tradicional</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p3b" name="vis3" class="custom-control-input" value="Parcial">
+                                                <label class="custom-control-label" for="p3b">Parcial</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p3c" name="vis3" class="custom-control-input" value="Ninguna">
+                                                <label class="custom-control-label" for="p3c">Ninguna</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si utiliza estos fertilizantes, descríbalos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis3t" placeholder="Fertilizantes" value="{{vis3t}}">
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Hace cuanto tiempo los utiliza?:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis3d" placeholder="Tiempo de uso" value="{{vis3d}}">
+                                        </div>
+                                    </div>
+                            <!-- vis4 no existe -->
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que planes establecidos hacen parte de su proyecto:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p5a" name="vis5" class="custom-control-input" value="Fertilidad">
+                                                <label class="custom-control-label" for="p5a">Fertilidad</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p5b" name="vis5" class="custom-control-input" value="Control de plagas y enfermedades">
+                                                <label class="custom-control-label" for="p5b">Control de plagas y enfermedades</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p5c" name="vis5" class="custom-control-input" value="Rotación de cultivos">
+                                                <label class="custom-control-label" for="p5c">Rotación de cultivos</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- PART 2 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">El uso de pesticidas, fungicidas y/o insecticidas de composición Agroecologica usa en los cultivos?:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p6a" name="vis6" class="custom-control-input" value="Total">
+                                                <label class="custom-control-label" for="p6a">Total</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p6b" name="vis6" class="custom-control-input" value="Parcial">
+                                                <label class="custom-control-label" for="p6b">Parcial</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p6c" name="vis6" class="custom-control-input" value="Ninguna">
+                                                <label class="custom-control-label" for="p6c">Ninguna</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Describa parcialmente los métodos que utiliza:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis6t" placeholder="métodos" value="{{vis6t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que metodo de compostaje realiza en el predio para los cultivos:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p7a" name="vis7" class="custom-control-input" value="Con Lombrices">
+                                                <label class="custom-control-label" for="p7a">Con Lombrices</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p7b" name="vis7" class="custom-control-input" value="Carrado en compostera rotativa">
+                                                <label class="custom-control-label" for="p7b">Carrado en compostera rotativa</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p7c" name="vis7" class="custom-control-input" value="Al aire libre">
+                                                <label class="custom-control-label" for="p7c">Al aire libre</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si utiliza Otro tipo, descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis7t" placeholder="compostaje" value="{{vis7t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">El registro documental de los procesos de cultivo los realiza:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p8a" name="vis8" class="custom-control-input" value="Periodico">
+                                                <label class="custom-control-label" for="p8a">Periodico</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p8b" name="vis8" class="custom-control-input" value="Ocacional">
+                                                <label class="custom-control-label" for="p8b">Ocacional</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p8c" name="vis8" class="custom-control-input" value="Ninguno">
+                                                <label class="custom-control-label" for="p8c">Ninguno</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Cada cuanto realiza rotación de los cultivos:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p9a" name="vis9" class="custom-control-input" value="Despues de cada cosecha">
+                                                <label class="custom-control-label" for="p9a">Despues de cada cosecha</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p9b" name="vis9" class="custom-control-input" value="Dos cosechas de por medio">
+                                                <label class="custom-control-label" for="p9b">Dos cosechas de por medio</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p9c" name="vis9" class="custom-control-input" value="No rota los cultivos">
+                                                <label class="custom-control-label" for="p9c">No rota los cultivos</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si utiliza Otro sistema, descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis9t" placeholder="rotación" value="{{vis9t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">En el proceso de cultivo, tiene áreas para:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p10a" name="vis10" class="custom-control-input" value="Semilleros">
+                                                <label class="custom-control-label" for="p10a">Semilleros</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p10b" name="vis10" class="custom-control-input" value="Plantulado">
+                                                <label class="custom-control-label" for="p10b">Plantulado</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p10c" name="vis10" class="custom-control-input" value="Otro">
+                                                <label class="custom-control-label" for="p10c">Otro</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si utiliza Otro sistema, descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis10t" placeholder="áreas" value="{{vis10t}}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PART 3 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Si consigue las plantulas en otro sitio, cual:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis11t" placeholder="Plantulas" value="{{vis11t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Que fuente de agua tiene para irrigar?</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis12t" placeholder="Irrigado" value="{{vis12t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Que fuente de agua utiliza para lavar los productos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis13t" placeholder="productos" value="{{vis13t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza alguna substancia para el lavado de productos? (Agroecológico o químico)</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p14a" name="vis14" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p14a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p14b" name="vis14" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p14b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis14t" placeholder="productos" value="{{vis14t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Que fuente de agua utiliza para lavar las herramientas:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis15t" placeholder="herramientas" value="{{vis15t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza alguna substancia para el lavado de las herramientas? (Agroecológico o químico)</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p16a" name="vis16" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p16a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p16b" name="vis16" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p16b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis16t" placeholder="herramientas" value="{{vis16t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Transporte:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p32a" name="vis32" class="custom-control-input" value="Transporta por si mismo">
+                                                <label class="custom-control-label" for="p32a">Transporta por si mismo</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p32b" name="vis32" class="custom-control-input" value="Se agrupa con otros para enviarlos">
+                                                <label class="custom-control-label" for="p32b">Se agrupa con otros para enviarlos</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p32c" name="vis32" class="custom-control-input" value="Tiene dificultad de transportación">
+                                                <label class="custom-control-label" for="p32c">Tiene dificultad de transportación</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p32d" name="vis32" class="custom-control-input" value="No condiciones de transporte">
+                                                <label class="custom-control-label" for="p32d">No condiciones de transporte</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mx-auto pt-3 pross">
+                            <a id="Procesados"></a>
+                            <h4 class="proynameapp c">Producción de Alimentos Procesados</h4>
+                            <div class="form-row mx-auto ">
+                                <!-- PART 4 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza colorantes artificiales en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p17a" name="vis17" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p17a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p17b" name="vis17" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p17b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis17t" placeholder="colorantes" value="{{vis17t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza saborizantes artificiales en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p18a" name="vis18" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p18a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p18b" name="vis18" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p18b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis18t" placeholder="saborizantes" value="{{vis18t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza Conservantes artificiales en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p19a" name="vis19" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p19a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p19b" name="vis19" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p19b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis19t" placeholder="Conservantes" value="{{vis19t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza Antimoho artificial en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p20a" name="vis20" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p20a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p20b" name="vis20" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p20b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis20t" placeholder="Antimoho" value="{{vis20t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que endulzante utiliza?:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p21a" name="vis21" class="custom-control-input" value="Azúcar Refinada">
+                                                <label class="custom-control-label" for="p21a">Azúcar Refinada</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p21b" name="vis21" class="custom-control-input" value="Estevia">
+                                                <label class="custom-control-label" for="p21b">Estevia</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p21c" name="vis21" class="custom-control-input" value="Panela">
+                                                <label class="custom-control-label" for="p21c">Panela</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p21d" name="vis21" class="custom-control-input" value="Otro">
+                                                <label class="custom-control-label" for="p21d">Otro</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis21t" placeholder="Endulzante" value="{{vis21t}}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PART 5 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de Sal utiliza?:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p22a" name="vis22" class="custom-control-input" value="Sal Refinada">
+                                                <label class="custom-control-label" for="p22a">Sal Refinada</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p22b" name="vis22" class="custom-control-input" value="Sal Yodada">
+                                                <label class="custom-control-label" for="p22b">Sal Yodada</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p22c" name="vis22" class="custom-control-input" value="Sal Marina">
+                                                <label class="custom-control-label" for="p22c">Sal Marina</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p22d" name="vis22" class="custom-control-input" value="Otra">
+                                                <label class="custom-control-label" for="p22d">Otra</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis22t" placeholder="Sales" value="{{vis22t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Pasteuriza sus productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p23a" name="vis23" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p23a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p23b" name="vis23" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p23b">No</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Empaca al Vacío?:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p24a" name="vis24" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p24a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p24b" name="vis24" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p24b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríba en pocas palabras el proceso:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis24t" placeholder="Empaque al vacio" value="{{vis24t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de empaque utiliza:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p25a" name="vis25" class="custom-control-input" value="Bolsa Plastica">
+                                                <label class="custom-control-label" for="p25a">Bolsa Plástica</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p25b" name="vis25" class="custom-control-input" value="Bolsa de Papel">
+                                                <label class="custom-control-label" for="p25b">Bolsa de Papel</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p25c" name="vis25" class="custom-control-input" value="Otra">
+                                                <label class="custom-control-label" for="p25c">Otra</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis25t" placeholder="Empaque" value="{{vis25t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de envase utiliza:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p26a" name="vis26" class="custom-control-input" value="Envase de Vidrio">
+                                                <label class="custom-control-label" for="p26a">Envase de Vidrio</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p26b" name="vis26" class="custom-control-input" value="Envase Plástico">
+                                                <label class="custom-control-label" for="p26b">Envase Plástico</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p26c" name="vis26" class="custom-control-input" value="Otro">
+                                                <label class="custom-control-label" for="p26c">Otro</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis26t" placeholder="Envase" value="{{vis26t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Aplica las normas de BPM en la producción?:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p27a" name="vis27" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p27a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p27b" name="vis27" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p27b">No</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- PART 6 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Sus productos son de producción Artesanal?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p28a" name="vis28" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p28a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p28b" name="vis28" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p28b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríba en pocas palabras el proceso:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis28t" placeholder="Empaque al vacio" value="{{vis28t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Donde consigue los insumos que utiliza para su producción:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis29t" placeholder="insumos" value="{{vis29t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Todos los insumos son de origen Agroecológico?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p30a" name="vis30" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p30a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p30b" name="vis30" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p30b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Mencione los que no son Agroecológicos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis30t" placeholder="No Agroecológicos" value="{{vis30t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza alguna substancia para el lavado de los utensilios? (Agroecológico o químico)</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p31a" name="vis31" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p31a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p31b" name="vis31" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p31b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis31t" placeholder="lavherram" value="{{vis31t}}">
+                                        </div>
+                                    </div>
+                            <!-- vis32 en PART 3 ultima ************************ -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mx-auto pt-3 prossbox">
+                            <a id="Otros"></a>
+                            <h4 class="proynameapp c">Otros Productos</h4>
+                            <div class="form-row mx-auto ">
+                                <!-- PART 7 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza colorantes, odorizantes y/o conservantes artificiales en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p33a" name="vis33" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p33a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p33b" name="vis33" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p33b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis33t" placeholder="colorantes" value="{{vis33t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza Antimoho artificial en los productos?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p34a" name="vis34" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p34a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p34b" name="vis34" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p34b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis34t" placeholder="Antimoho" value="{{vis34t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de Sal utiliza?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p35a" name="vis35" class="custom-control-input" value="Sal Refinada">
+                                                <label class="custom-control-label" for="p35a">Sal Refinada</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p35b" name="vis35" class="custom-control-input" value="Sal Yodada">
+                                                <label class="custom-control-label" for="p35b">Sal Yodada</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p35c" name="vis35" class="custom-control-input" value="Sal Marina">
+                                                <label class="custom-control-label" for="p35c">Sal Marina</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p35d" name="vis35" class="custom-control-input" value="Otra">
+                                                <label class="custom-control-label" for="p35d">Otra</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis35t" placeholder="Sales" value="{{vis35t}}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PART 8 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Utiliza algun producto derivado de animal?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p36a" name="vis36" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p36a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p36b" name="vis36" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p36b">No</label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de empaque utiliza:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p37a" name="vis37" class="custom-control-input" value="Bolsa Plastica">
+                                                <label class="custom-control-label" for="p37a">Bolsa Plástica</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p37b" name="vis37" class="custom-control-input" value="Bolsa de Papel">
+                                                <label class="custom-control-label" for="p37b">Bolsa de Papel</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p37c" name="vis37" class="custom-control-input" value="Otra">
+                                                <label class="custom-control-label" for="p37c">Otra</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbala:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis37t" placeholder="Empaque" value="{{vis37t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Que tipo de envase utiliza:</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p38a" name="vis38" class="custom-control-input" value="Envase de Vidrio">
+                                                <label class="custom-control-label" for="p38a">Envase de Vidrio</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p38b" name="vis38" class="custom-control-input" value="Envase Plástico">
+                                                <label class="custom-control-label" for="p38b">Envase Plástico</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p38c" name="vis38" class="custom-control-input" value="Otro">
+                                                <label class="custom-control-label" for="p38c">Otro</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríbalo:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis38t" placeholder="Envase" value="{{vis38t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Donde consigue los insumos que utiliza para su producción:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis39t" placeholder="insumos" value="{{vis39t}}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PART 9 -->
+                                <div class="col-md-4 ">
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Sus productos son de producción Artesanal?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p40a" name="vis40" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p40a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p40b" name="vis40" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p40b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Descríba en pocas palabras el proceso:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis40t" placeholder="Empaque al vacio" value="{{vis40t}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-row mx-auto box1">
+                                        <h4 class="proynameapp c">Todos los insumos son de origen Agroecológico?</h4>
+                                        <ul>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p41a" name="vis41" class="custom-control-input" value="Si">
+                                                <label class="custom-control-label" for="p41a">Si</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="p41b" name="vis41" class="custom-control-input" value="No">
+                                                <label class="custom-control-label" for="p41b">No</label>
+                                            </div>
+                                        </ul>
+                                        <div class="col-md-12 ">
+                                            <h4 class="proynameapp c">Mencione los que no son Agroecológicos:</h4>
+                                            <input class="form-group col-md-12" type="text" name="vis41t" placeholder="No Agroecológicos" value="{{vis41t}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mx-auto pt-3 box1">
+                            <a id="Notas"></a>
+                            <div class="form-row mx-auto ">
+                                <div class="col-md-6 ">
+                                    <h4 class="proynameapp c">Notas sobre la visita</h4>
+                                    <textarea class="form-group col-md-12" type="text" name="notasvisit" placeholder="Notas">{{notasvisit}}</textarea>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <h4 class="proynameapp c">Productos sugeridos</h4>
+                                    <textarea class="form-group col-md-12" type="text" name="prodsug" placeholder="Productos?" >{{prodsug}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mx-auto pb-2 prossbox">
+                            <div class="col-lg-4 mx-auto p-3 backred c">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="cumple" name="cumple">
+                                    <label class="custom-control-label proydata3 " for="cumple">Cumple con los Requisitos</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 pb-3 mx-auto margupbutt">
+                            <button class="btn btn-success btn-block" name="submit" type="submit">
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<a href="/proyects">
+    <img class="bttp1 float-right sticky2" src="/imagen/backpage.png" alt="" width="20%">
+</a>
+
+</body>

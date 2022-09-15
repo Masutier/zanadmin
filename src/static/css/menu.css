@@ -1,0 +1,44 @@
+
+.imgtop{
+    width: 100%;
+    padding: 10px;
+}
+.backmenu{
+    background-color: #353c48;
+    color: white;
+    border: #4c5667 1px solid;
+}
+.sticky{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+/* side menus */
+
+.menutitle{
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #4cc947;
+}
+.menutxt{
+    font-size: 1rem;
+    font-weight: 100;
+    color: #f99300;
+}
+.totproy{
+    font-size: 3rem;
+    font-weight: 200;
+    color: #f99300;
+}
+.proylinks{
+    font-size: 1rem;
+    color: wheat;
+}
+.proylinks:hover{
+    font-size: 1.02rem;
+    color: white;
+}
+.prodprop{
+    padding-top: 5px;
+}

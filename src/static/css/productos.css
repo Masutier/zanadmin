@@ -1,0 +1,36 @@
+
+
+.prodtitle{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #bebebe;
+}
+
+/* PRODDET */
+.bm{
+    margin-left: 30px;
+}
+
+
+/* PRODEDIT */
+.textarea{
+    background-color: #4c5667;
+    color: white;
+    overflow: auto;
+    padding: 0;
+    border: #353c48 1px solid;
+    margin: 10px;
+}
+.inparea{
+    background-color: #4c5667;
+    color: white;
+    overflow: auto;
+    padding: 0;
+    border: #353c48 1px solid;
+    margin: 10px;
+}
+.pd{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 30px;
+}

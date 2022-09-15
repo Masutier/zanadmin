@@ -1,0 +1,65 @@
+/* MAIN BODY */
+.mainback{
+    background-color: #3b4350;
+}
+
+/* BOXES */
+
+.boxmarg{
+    margin: 3px;
+}
+.box1{
+    background-color: #353c48;
+    color: white;
+    margin-top: 12px;
+    margin-right: 2px;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: #4c5667 1px solid;
+}
+.box1title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #1392d3;
+}
+.box1remark{
+    font-size: 1rem;
+    font-weight: 100;
+    color: #8d98a7;
+}
+.box1estad{
+    font-size: 1.6rem;
+    font-weight: 100;
+    color: white;
+}
+
+.box2title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #f99300;
+}
+.box3title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #4cc947;
+}
+.box4title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #f9c000;
+}
+.box5title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #bebebe;
+}
+.box6title{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: #1c75bc;
+}
+
+
+

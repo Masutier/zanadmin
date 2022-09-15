@@ -1,0 +1,103 @@
+
+{{> banners/flyminibanner }}
+
+<div class="col-lg-12 stopfly ">
+    <div class="col-lg-8 pt-4 pb-4 mx-auto">
+        <h4 class="hellotxt ">
+            Esta información es tu Perfil
+        </h4>
+    </div>
+    <div class="col-lg-11 pb-4 mx-auto">
+        <h5 class="hellotxt ">
+            Utiliza información real, tu Correo Electrónico es tu Llave de ingreso y nuestra forma de identificarte.
+        </h5>
+    </div>
+    <div class="col-lg-11 pb-2 mx-auto">
+        <h6 class="hellotxtmin ">
+            <c>*</c> Espacio requerido, <c>**</c> Tu Identificación en la pagina.
+        </h6>
+    </div>
+</div>
+
+<!-- FORMATO -->
+<div class="container-fluid">
+    <div class="container col-lg-8 mx-auto">
+
+        <form action="/signup" method="POST">
+
+            <div class="form-row margintop">
+                <div class="col-md-3 margintop">
+                    <label>Primer Nombre <c>*</c></label>
+                    <input class="form-group col-md-12" type="text" name="firstname" placeholder="Primer Nombre" value="{{firstname}}" autofocus>
+                </div>
+                <div class="col-md-3 margintop">
+                    <label>Segundo Nombre</label>
+                    <input class="form-group col-md-12" type="text" name="middlename" placeholder="Segundo Nombre" value="{{middlename}}" >
+                </div>
+                <div class="col-md-3 margintop">
+                    <label>Primer Apellido <c>*</c></label>
+                    <input class="form-group col-md-12" type="text" name="lastname" placeholder="Primer Apellido" value="{{lastname}}" >
+                </div>
+                <div class="col-md-3 margintop">
+                    <label>Segundo Apellido <c>*</c></label>
+                    <input class="form-group col-md-12" type="text" name="maidenname" placeholder="Segundo Apellido" value="{{maidenname}}" >
+                </div>
+            </div>
+
+            <div class="col-lg-9 mx-auto">
+                <div class="form-row mx-auto margintop">
+                    <div class="col-md-7 margintop">
+                        <label>Tipo de Doc <c>*</c></label>
+                        <select name="tydoc" id="tydoc" class="form-group-sm col-md-12">
+                            <option value="cc">
+                                Cedula Ciudadania
+                            </option>
+                            <option value="ce">
+                                Cedula Extrangeria
+                            </option>
+                            <option value="ot">
+                                Otro
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-md-5 margintop">
+                        <label>Numero Documento <c>*</c></label>
+                        <input class="form-group col-md-12" type="text" name="cedula" placeholder="Numero de Documento" value="{{cedula}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+                <div class="form-row mx-auto margintop">
+                    <div class="col-md-4 margintop">
+                        <label>Telefono <c>*</c></label>
+                        <input class="form-group col-md-12" type="text" name="phone" placeholder="10 Numeros" value="{{tel}}" >
+                    </div>
+                    <div class="col-md-8 margintop">
+                        <label>Correo Electrónico <c>**</c></label>
+                        <input class="form-group col-md-12" type="email" name="email" placeholder="Email" value="{{email}}" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-10 mx-auto">
+                <div class="form-row mx-auto margintop">
+                    <div class="col-md-6 margintop">
+                        <label>Contraseña <c>*</c></label>
+                        <input class="form-group col-md-12" type="password" name="password" placeholder="Password" >
+                    </div>
+                    <div class="col-md-6 margintop">
+                        <label>Confirmar Contraseña <c>*</c></label>
+                        <input class="form-group col-md-12" type="password" name="confirm_pass" placeholder="Confirm Password" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="container col-lg-8 mx-auto paddtop">
+                <button class="btn btn-success btn-block" name="submit" type="submit">
+                    Guardar Perfil
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

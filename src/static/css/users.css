@@ -1,0 +1,52 @@
+/* ALGUNOS CSS VIENEN DEL INDEX.CSS */
+/* OTROS DE PROYECTOS.CSS */
+/* ABAJO ESTAN LOS SIDEMENUS DE PROYECTOS */
+
+.usrbox{
+    background-color: #353c48;
+    color: white;
+    margin-top: 5px;
+    margin-right: 2px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    border: #4c5667 1px solid;
+}
+
+.usrdata{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: right;
+    color: #8d98a7;
+    padding: 7px 0px 2px 0px;
+}
+.usrdata1{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: left;
+    color: wheat;
+    padding: 7px 0px 2px 0px;
+}
+.btnusr{
+    font-size: 1.2rem;
+    color: #1392d3;
+    text-align: center;
+    background-color: transparent;
+    border: #1392d3 1px solid;
+    padding: 2px 0px 2px 0px;
+}
+.btnusr:hover{
+    font-size: 1.2rem;
+    color: #4cc947;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: #4cc947 1px solid;
+    padding: 2px 0px 2px 0px;
+}
+
+.usrcost{
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    color: #8d98a7;
+}
